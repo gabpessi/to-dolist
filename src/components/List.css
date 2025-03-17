@@ -1,0 +1,35 @@
+.list {
+    background-color: #F8E7F6;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.list ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+button img {
+    width: 20px;
+    
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    
+}
