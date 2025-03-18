@@ -29,3 +29,16 @@ Certifique-se de ter o **Node.js** e **npm** instalados. Se não tiver, você po
 
    ```bash
    git clone https://github.com/seu-usuario/projeto-lista-tarefas.git
+   
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd projeto-lista-tarefas
+   
+3. Instale as dependências
+   ```bash
+   npm install
+
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   
