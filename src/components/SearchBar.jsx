@@ -1,26 +1,43 @@
-import './SearchBar.css'
-import { useState } from 'react'
+import "./SearchBar.css";
+import AddIcon from "../assets/add-icon.svg";
+import { useState } from "react";
 
-  const SearchBar = ({handleAddItem}) => {
-
-  const [listItem, setListItem] = useState("")  
+const SearchBar = ({ handleAddItem }) => {
+  const [listItem, setListItem] = useState("");
 
   const handleButtonClick = () => {
-    if (listItem.trim() === "") return
-    handleAddItem(listItem)
-    setListItem("")
+    if (listItem.trim() === "") return;
+    handleAddItem(listItem);
+    setListItem("");
   };
 
   const handleChange = (e) => {
-    setListItem(e.target.value)
-  }
+    setListItem(e.target.value);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleButtonClick();
+    }
+  };
 
   return (
-    <div className="searchbar">
-      <input onChange={handleChange} value={listItem} placeholder="Adicione uma tarefa..." />
-      <button onClick={handleButtonClick} className="add-button">+</button>
-    </div>
-  )
-}
+    <>
+      <h1>To-Do List 📝</h1>
+      <div className="searchbar">
+        <input
+          className="search-input"
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          value={listItem}
+          placeholder="Adicione uma tarefa..."
+        />
+        <button onClick={handleButtonClick} className="add-button">
+          <img src={AddIcon} alt="Adicionar" />
+        </button>
+      </div>
+    </>
+  );
+};
 
-export default SearchBar
+export default SearchBar;
